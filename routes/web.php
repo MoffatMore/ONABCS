@@ -19,10 +19,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::redirect('/home', '/redirect')->name('home');
+Route::get('/redirect', 'RedirectController')->name('dashboard');
 
 Route::resource('product', 'ProductController');
 Route::resource('users', 'UserController');
-Route::group(['prefix' => 'customer','as' => 'customer.', 'namespace' => 'Customer'], function () {
-
+Route::group(['prefix' => 'customer','as' => 'customer.'], function () {
+    Route::get('/orders','CustomerController@orders')->name('orders');
+    Route::get('/fix-gadgets','CustomerController@fix')->name('fix');
+    Route::get('/buy', 'CustomerController@buy')->name('buy');
+    Route::get('/faulty-gadgets','CustomerController@faultyGadgets')->name('faults');
+    Route::get('/order-details','CustomerController@showOrder')->name('order-details');
+    Route::get('/expert-details','CustomerController@showExperts')->name('expert-details');
 });

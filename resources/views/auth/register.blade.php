@@ -42,7 +42,7 @@
                             <label for="speciality" class="col-md-4 col-form-label text-md-right">{{ __('Area of Speciality') }}</label>
 
                             <div class="col-md-6">
-                                <textarea class="form-control"></textarea>
+                                <textarea class="form-control" name="speciality"></textarea>
                                 @error('speciality')
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

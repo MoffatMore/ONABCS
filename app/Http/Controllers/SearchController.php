@@ -22,8 +22,9 @@ class SearchController extends Controller
           ->addExactSearchableAttribute('email')
           ->addSearchableAttribute('speciality')
           ->active()
-          ->with('rating');
+          ->with('ratings');
 })
         ->search(request('query'));
+        return view('search-results')->with('searchResults',$search);
     }
 }

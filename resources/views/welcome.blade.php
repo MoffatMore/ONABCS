@@ -19,7 +19,7 @@
                 <div class="card-body row no-gutters align-items-center">
                     <!--end of col-->
                     <div class="col">
-                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search expert to help">
+                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search product">
                     </div>
                     <!--end of col-->
                     <div class="col-auto">

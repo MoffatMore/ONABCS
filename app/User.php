@@ -50,4 +50,8 @@ class User extends Authenticatable implements Searchable
            $url
         );
     }
+
+    public function orders(){
+        return $this->hasMany(OrderProduct::class);
+    }
 }
