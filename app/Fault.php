@@ -13,5 +13,16 @@ class Fault extends Model
         'description',
         'expert_id',
         'owner_id',
+        'status'
     ];
+
+    public function owner()
+    {
+        return $this->belongsTo(User::class,'owner_id','id');
+    }
+
+    public function expert()
+    {
+        return $this->belongsTo(User::class,'expert_id','id');
+    }
 }

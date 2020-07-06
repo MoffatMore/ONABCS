@@ -18,13 +18,9 @@ class SearchController extends Controller
         $search = (new Search())
         ->registerModel(User::class, function(ModelSearchAspect $modelSearchAspect) {
             $modelSearchAspect
-          ->addSearchableAttribute('name')
-          ->addExactSearchableAttribute('email')
-          ->addSearchableAttribute('speciality')
-          ->active()
-          ->with('ratings');
+          ->addSearchableAttribute('location');
 })
-        ->search(request('query'));
+        ->search(auth()->user()->location);
         return view('search-results')->with('searchResults',$search);
     }
 }

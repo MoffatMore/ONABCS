@@ -68,7 +68,7 @@
                                <div class="form-group">
                                    <select class="form-control" name="role">
                                        <option>Customer</option>
-                                       <option>Experts</option>
+                                       <option>Expert</option>
                                    </select>
                                </div>
                                 @error('role')

@@ -36,13 +36,16 @@
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach($user->faults as $fault)
                     <tr>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
+                        <td>{{ $fault->name }}</td>
+                        <td>
+                            {{ $fault->description  }}
                         </td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
+                        <td>
+                            {{ $fault->expert !== null? $fault->expert->name : 'Not Assigned'}}
+                        </td>
+                        <td> {{ $fault->status }}</td>
                         <td>
                             <a class="btn btn-warning text-white">
                                 <i class="fas fa-edit"></i> Edit
@@ -50,11 +53,19 @@
                             <a class="btn btn-danger text-white">
                                 <i class="fas fa-trash"></i> Delete
                             </a>
-                            <a href="{{ route('customer.order-details') }}" class="btn btn-info text-white">
-                                <i class="fas fa-star"></i> Rate Expert
+                            @if($fault->expert === null)
+                            <a href="{{ route('customer.expert-details',['fid'=>$fault->id]) }}" class="btn btn-success text-white">
+                               Assign Expert
                             </a>
+                                @endif
+                            @if($fault->status === 'Complete')
+                                <a href="{{ route('customer.order-details') }}" class="btn btn-info text-white">
+                                    <i class="fas fa-star"></i> Rate Expert
+                                </a>
+                            @endif
                         </td>
                     </tr>
+                    @endforeach
                     </tbody>
                     <tfoot>
                     <tr>

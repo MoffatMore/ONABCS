@@ -22,6 +22,7 @@ class CreateFaultsTable extends Migration
                 ->on('users')
                 ->onDelete('CASCADE');
             $table->string('expert_id')->nullable();
+            $table->string('status')->nullable();
             $table->text('description');
             $table->timestamps();
         });

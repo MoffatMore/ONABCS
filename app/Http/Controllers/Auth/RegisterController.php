@@ -77,7 +77,7 @@ class RegisterController extends Controller
             case 'Customer':
                 $user->assignRole($role);
                 break;
-            case 'Experts':
+            case 'Expert':
                 $role = Role::find(2);
                 $user->assignRole($role);
                 break;

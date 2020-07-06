@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\OrderProduct;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -35,6 +36,12 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         //
+        $order = OrderProduct::create([
+            'product_id' => $request->pid,
+            'quantity' => $request->quantity,
+            'user_id' => auth()->user()->id,
+            'status' => 'Pending'
+        ]);
     }
 
     /**

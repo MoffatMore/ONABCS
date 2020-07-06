@@ -19,7 +19,7 @@ class RedirectController extends Controller
         switch ($user->roles()->first()->name){
             case 'Customer':
                 return view('customer-dashboard');
-            case 'Experts':
+            case 'Expert':
                 return view('expert-dashboard');
             default:
                 return view('admin-dashboard');

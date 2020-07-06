@@ -37,26 +37,28 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>X</td>
-                        <td>
-                            <a class="btn btn-warning text-white">
-                                <i class="fas fa-edit"></i> Edit
-                            </a>
-                            <a class="btn btn-danger text-white">
-                                <i class="fas fa-trash"></i> Delete
-                            </a>
-                            <a href="{{ route('customer.order-details') }}" class="btn btn-info text-white">
-                                <i class="fas fa-eye"></i> View
-                            </a>
-                        </td>
-                    </tr>
+                    @foreach($orders as $order)
+                        <tr>
+                            <td>{{ $order->product->name }}</td>
+                            <td>
+                                {{ $order->product->description }}
+                            </td>
+                            <td>{{ $order->quantity }}</td>
+                            <td>{{ $order->status }}</td>
+                            <td>X</td>
+                            <td>
+                                <a class="btn btn-warning text-white">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
+                                <a class="btn btn-danger text-white">
+                                    <i class="fas fa-trash"></i> Delete
+                                </a>
+                                <a href="{{ route('customer.order-details') }}" class="btn btn-info text-white">
+                                    <i class="fas fa-eye"></i> View
+                                </a>
+                            </td>
+                        </tr>
+                        @endforeach
                     </tbody>
                     <tfoot>
                     <tr>

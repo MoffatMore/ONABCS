@@ -54,4 +54,14 @@ class User extends Authenticatable implements Searchable
     public function orders(){
         return $this->hasMany(OrderProduct::class);
     }
+
+    public function faults()
+    {
+        return $this->hasMany(Fault::class,'owner_id','id');
+    }
+
+    public function fix()
+    {
+        return $this->hasMany(Fault::class,'expert_id','id');
+    }
 }

@@ -26,4 +26,9 @@ class Product extends Model implements Searchable
             $url
          );
      }
+
+    public function order()
+    {
+        return $this->hasMany(OrderProduct::class);
+     }
 }

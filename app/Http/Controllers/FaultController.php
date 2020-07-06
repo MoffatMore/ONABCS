@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Fault;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class FaultController extends Controller
 {
@@ -35,6 +37,30 @@ class FaultController extends Controller
     public function store(Request $request)
     {
         //
+        if ($request->hasFile('picture')){
+            $file = $request->file('picture');
+
+            Storage::putFile($file->getClientOriginalName(),$file);
+            $fault = Fault::create([
+                'name' => $request->name,
+                'picture' => $file->getClientOriginalName(),
+                'description'=> $request->description,
+                'owner_id'=> auth()->user()->id,
+                'status' => 'Pending',
+            ]);
+            return redirect()->route('customer.expert-details',['fid'=>$fault->id]);
+        }else{
+            $fault = Fault::create([
+                'name' => $request->name,
+                'picture' => $request->name,
+                'description'=> $request->description,
+                'owner_id'=> auth()->user()->id,
+                'status' => 'Pending',
+            ]);
+            return redirect()->route('customer.expert-details',['fid'=>$fault->id]);
+        }
+
+        return redirect()->back()->with('fail','Unsuccessfully submitted request');
     }
 
     /**
@@ -62,13 +88,14 @@ class FaultController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param \Illuminate\Http\Request $request
+     * @param Fault $fault
+     * @return void
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Fault $fault)
     {
-        //
+        $fault->update($request->all());
+        return redirect()->route('dashboard')->with('success','Successfully submitted request');
     }
 
     /**
