@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Fault;
-use App\OrderProduct;
+
+use App\Product;
 use App\User;
-use Illuminate\Http\Request;
-use Spatie\Searchable\Search;
 
 class CustomerController extends Controller
 {
     public function orders()
     {
-        $orders = OrderProduct::with('product')
-            ->where('user_id',auth()->user()->id);
-        return view('customer.orders')->with('orders',$orders);
+       $user = User::find(auth()->user()->id);
+       $user->load('orders');
+        return view('customer.orders')->with('orders',$user->orders);
     }
 
     public function fix()
@@ -23,9 +21,9 @@ class CustomerController extends Controller
         return view('customer.fix-gadget');
     }
 
-    public function showOrder()
+    public function showOrder(Product $product)
     {
-        return view('customer.order-details');
+        return view('customer.order-details',compact('product'));
     }
 
     public function showExperts(int $fid)
@@ -47,6 +45,7 @@ class CustomerController extends Controller
 
     public function buy()
     {
-        return view('welcome');
+        $products = Product::all();
+        return view('welcome')->with('products',$products);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\OrderProduct;
+use App\User;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -37,11 +38,12 @@ class OrderController extends Controller
     {
         //
         $order = OrderProduct::create([
-            'product_id' => $request->pid,
+            'product_id' => $request->product_id,
             'quantity' => $request->quantity,
             'user_id' => auth()->user()->id,
             'status' => 'Pending'
         ]);
+        return redirect()->route('customer.orders');
     }
 
     /**

@@ -25,15 +25,19 @@ Route::get('/redirect', 'RedirectController')->name('dashboard');
 Route::resource('product', 'ProductController');
 Route::resource('users', 'UserController');
 Route::resource('fault', 'FaultController');
+Route::resource('order', 'OrderController');
 Route::group(['prefix' => 'customer','as' => 'customer.'], function () {
     Route::get('/orders','CustomerController@orders')->name('orders');
     Route::get('/fix-gadgets','CustomerController@fix')->name('fix');
     Route::get('/buy', 'CustomerController@buy')->name('buy');
     Route::get('/faulty-gadgets','CustomerController@faultyGadgets')->name('faults');
-    Route::get('/order-details','CustomerController@showOrder')->name('order-details');
+    Route::get('/order-details/{product}','CustomerController@showOrder')->name('order-details');
     Route::get('/expert-details/{fid}','CustomerController@showExperts')->name('expert-details');
 });
 
 Route::group(['prefix' => 'admin','as' => 'admin.'], function () {
     Route::get('/dashboard','AdminController@index')->name('dashboard');
+    Route::get('/orders','AdminController@orders')->name('orders');
+    Route::get('/products','AdminController@products')->name('products');
+    Route::get('/users','AdminController@users')->name('users');
 });

@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>My Orders</h1>
+                    <h1>My Faulty Gadgets</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
-                        <li class="breadcrumb-item active">My Orders</li>
+                        <li class="breadcrumb-item active">My Faulty Gadgets</li>
                     </ol>
                 </div>
             </div>
@@ -29,9 +29,8 @@
                     <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Description</th>
-                        <th>Quantity</th>
-                        <th>Total Price</th>
+                        <th>Fault Description</th>
+                        <th>Assigned Expert</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
@@ -41,31 +40,28 @@
                         <tr>
                             <td>{{ $order->product->name }}</td>
                             <td>
-                                {{ $order->product->description }}
+                                {{ $order->quantity  }}
                             </td>
-                            <td>{{ $order->quantity }}</td>
-                            <td>{{ $order->product->price * $order->quantity }}</td>
-                            <td>{{ $order->status }}</td>
                             <td>
-                                <a class="btn btn-sm btn-warning text-white">
-                                    <i class="fas fa-edit"></i> Edit
+                                {{ $order->user->name }}
+                            </td>
+                            <td> {{ $order->status }}</td>
+                            <td>
+                                <a class="btn btn-warning text-white">
+                                    <i class="fas fa-check"></i> Accept
                                 </a>
-                                <a class="btn btn-sm btn-danger text-white">
-                                    <i class="fas fa-trash"></i> Delete
-                                </a>
-                                <a href="{{ route('customer.order-details',['product'=>$order->product->id]) }}" class="btn btn-sm btn-info text-white">
-                                    <i class="fas fa-eye"></i> View
+                                <a class="btn btn-danger text-white">
+                                    <i class="fas fa-trash"></i> Decline
                                 </a>
                             </td>
                         </tr>
-                        @endforeach
+                    @endforeach
                     </tbody>
                     <tfoot>
                     <tr>
                         <th>Name</th>
-                        <th>Description</th>
-                        <th>Quantity</th>
-                        <th>Total Price</th>
+                        <th>Fault Description</th>
+                        <th>Assigned Expert</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>

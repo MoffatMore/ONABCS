@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -14,7 +15,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        $products = Product::paginate(4);
+        return view('welcome')->with('products',$products);
     }
 
     /**
@@ -24,7 +26,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.new-product');
     }
 
     /**
@@ -35,7 +37,30 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->hasFile('picture')){
+            $file = $request->file('picture');
+
+            Storage::putFile($file->getClientOriginalName(),$file);
+            $product = Product::create([
+                'name'=>$request->name,
+                'description' =>$request->description,
+                'price' => $request->price,
+                'status' => 'Available',
+                'picture'=>$file->getClientOriginalName()
+            ]);
+            return redirect()->route('admin.products')->with('success','Successfully added a new product');
+        }else{
+            $product = Product::create([
+                'name'=>$request->name,
+                'description' =>$request->description,
+                'price' => $request->price,
+                'status' => 'Available',
+            ]);
+            return redirect()->route('admin.new-product')->with('fail','Unsuccessfully added new product');
+        }
+
+        return redirect()->back()->with('fail','Unsuccessfully submitted request');
+
     }
 
     /**
@@ -44,9 +69,10 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show($product)
+    public function show(Product $product)
     {
-       return view('product-details');
+
+       return view('product-details',compact('product'));
     }
 
     /**
