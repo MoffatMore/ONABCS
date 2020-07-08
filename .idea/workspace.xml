@@ -2,28 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="286ce7a3-3a8b-4195-ad9b-649bbd7a6225" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/gadget-place-holder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/orders.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/expert-default.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cs-shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cs-shop.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderProductController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin-dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin-dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/new-product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/new-product.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/order-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/order-details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/orders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/orders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin-default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin-default.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/product-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product-details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RedirectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RedirectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/expert-dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/expert-dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/customer-default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/customer-default.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +22,7 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
-      <executable />
+      <executable path="composer" />
     </execution>
   </component>
   <component name="Git.Settings">
@@ -151,32 +141,28 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
     <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/resources/views/layouts/admin-default.blade.php" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/layouts" />
+      <recent name="C:\Users\Moffat\Documents\Projects\cs-shop\resources\views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Moffat\Documents\Projects\cs-shop\resources\views\customer" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Moffat\Documents\Projects\cs-shop\resources\views" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -198,26 +184,40 @@
       <workItem from="1594068240042" duration="761000" />
       <workItem from="1594069430323" duration="9614000" />
       <workItem from="1594116528957" duration="10057000" />
+      <workItem from="1594239041353" duration="2853000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="535" y="376" width="525" height="183" key="ComposerInitDialogKey" timestamp="1594231753602">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="535" y="376" width="525" height="183" key="ComposerInitDialogKey/0.27.1600.873@0.27.1600.873" timestamp="1594231753602" />
+    <state x="200" y="137" width="1200" height="633" key="DiffContextDialog" timestamp="1594244029629">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="200" y="137" width="1200" height="633" key="DiffContextDialog/0.27.1600.873@0.27.1600.873" timestamp="1594244029629" />
+    <state x="586" y="214" width="424" height="496" key="FileChooserDialogImpl" timestamp="1594243940868">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="586" y="214" width="424" height="496" key="FileChooserDialogImpl/0.27.1600.873@0.27.1600.873" timestamp="1594243940868" />
   </component>
 </project>

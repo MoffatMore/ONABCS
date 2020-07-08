@@ -16,6 +16,9 @@ class RedirectController extends Controller
     public function __invoke(Request $request)
     {
         $user = Auth::user();
+        if($user === null){
+            return redirect()->route('login');
+        }
         switch ($user->roles()->first()->name){
             case 'Customer':
                 return view('customer-dashboard');
