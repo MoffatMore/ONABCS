@@ -15,7 +15,7 @@
         <div class="col col-6">
             <div class="col-xs-4 item-photo">
                 @if($product->picture != null)
-                <img style="max-width:100%; max-height: 10%" src="{{ asset('storage/'.$product->picture) }}" />
+                <img style="max-width:100%; max-height: 10%" src="{{ asset('storage/products/'.$product->picture) }}" />
                     @else
                     <img style="max-width:100%; max-height: 10%" src="{{ asset('images/gadget-place-holder.png') }}" />
                     @endif

@@ -36,7 +36,7 @@
 
                             </div>
                             @if($product->picture != null)
-                                <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="{{ asset('storage/'.$product->picture) }}" style="width: 200px; height: 250px;">
+                                <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="{{ asset('storage/products/'.$product->picture) }}" style="width: 200px; height: 250px;">
                             @else
                                 <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [150x100]" src="{{ asset('images/gadget-place-holder.png') }}" style="width: 200px; height: 250px;">
                             @endif

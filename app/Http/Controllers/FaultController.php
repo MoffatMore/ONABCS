@@ -39,11 +39,12 @@ class FaultController extends Controller
         //
         if ($request->hasFile('picture')){
             $file = $request->file('picture');
+            $name = $file->getClientOriginalName();
 
-            Storage::disk('public')->put($file->getClientOriginalName(),$file);
+            Storage::putFileAs('faults',$file,$name);
             $fault = Fault::create([
                 'name' => $request->name,
-                'picture' => $file->getClientOriginalName(),
+                'picture' => $name,
                 'description'=> $request->description,
                 'owner_id'=> auth()->user()->id,
                 'status' => 'Pending',

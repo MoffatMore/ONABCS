@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.customer-default')
 @section('content')
     <h1>Search</h1>
     There are {{ $searchResults->count() }} results.

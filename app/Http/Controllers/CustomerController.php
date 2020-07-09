@@ -52,6 +52,7 @@ class CustomerController extends Controller
     public function buy()
     {
         $products = Product::all();
+        //dd($products);
         return view('welcome')->with('products',$products);
     }
 

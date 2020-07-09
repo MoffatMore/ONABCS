@@ -39,14 +39,14 @@ class ProductController extends Controller
     {
         if ($request->hasFile('picture')){
             $file = $request->file('picture');
-
-            Storage::disk('public')->put($file->getClientOriginalName(),$file);
+            $name = $file->getClientOriginalName();
+            Storage::putFileAs('products',$file,$name);
             $product = Product::create([
                 'name'=>$request->name,
                 'description' =>$request->description,
                 'price' => $request->price,
                 'status' => 'Available',
-                'picture'=>$file->getClientOriginalName()
+                'picture'=>$name
             ]);
             return redirect()->route('admin.products')->with('success','Successfully added a new product');
         }else{
