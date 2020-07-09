@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Auth;
 
 class ExpertController extends Controller
 {
+    public function index(){
+        return view('expert-dashboard');
+    }
     //
     public function requests()
     {

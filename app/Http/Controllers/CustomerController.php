@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 
 use App\Fault;
-use App\OrderProduct;
 use App\Product;
 use App\User;
 
 class CustomerController extends Controller
 {
+    public function index(){
+        return view('customer-dashboard');
+    }
+
     public function orders()
     {
        $user = User::find(auth()->user()->id);

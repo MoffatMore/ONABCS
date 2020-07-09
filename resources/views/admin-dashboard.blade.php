@@ -29,7 +29,7 @@
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>400</h3>
+                        <h3>{{ $products->count() }}</h3>
                             <p>Products</p>
                         </div>
                         <div class="icon">
@@ -43,7 +43,7 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>53<sup style="font-size: 20px">%</sup></h3>
+                        <h3>{{ $orders->count() }}</h3>
 
                             <p>Orders</p>
                         </div>
@@ -58,7 +58,7 @@
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3>44</h3>
+                        <h3>{{ $users->count() }}</h3>
 
                             <p>User Registrations</p>
                         </div>

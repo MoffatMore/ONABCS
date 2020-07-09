@@ -29,6 +29,7 @@ Route::resource('rating', 'RatingController');
 
 Route::group(['prefix' => 'customer','as' => 'customer.'], function () {
     Route::post('/mark-as-read', 'HomeController@markNotification')->name('markNotification');
+    Route::get('/dashboard','CustomerController@index')->name('dashboard');
     Route::get('/orders','CustomerController@orders')->name('orders');
     Route::get('/fix-gadgets','CustomerController@fix')->name('fix');
     Route::get('/delete/{order}', 'CustomerController@deleteOrder')->name('deleteOrder');
@@ -65,4 +66,5 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.',], function () {
 Route::group(['prefix'=>'expert','as'=>'expert.'],function (){
     Route::get('/requests','ExpertController@requests')->name('requests');
     Route::get('/ratings','ExpertController@ratings')->name('ratings');
+    Route::get('/dashboard','ExpertController@index')->name('dashboard');
 });

@@ -13,7 +13,14 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin-dashboard');
+        $products = Product::all();
+        $orders = OrderProduct::all();
+        $users = User::all();
+        return view('admin-dashboard')->with([
+            'products'=> $products,
+            'orders' => $orders,
+            'users' => $users
+        ]);
     }
 
     public function orders()
