@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="286ce7a3-3a8b-4195-ad9b-649bbd7a6225" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExpertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExpertController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RatingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RatingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/edit-faulty.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/edit-faulty.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/experts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/experts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/faulty-gadgets.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/faulty-gadgets.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/orders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/orders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/rate-expert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/rate-expert.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/expert/ratings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/expert/ratings.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/expert/requests.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/expert/requests.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/edit-product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/edit-product.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +185,7 @@
       <workItem from="1594068240042" duration="761000" />
       <workItem from="1594069430323" duration="9614000" />
       <workItem from="1594116528957" duration="10057000" />
-      <workItem from="1594239041353" duration="22382000" />
+      <workItem from="1594239041353" duration="23844000" />
     </task>
     <servers />
   </component>
@@ -217,10 +208,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="536" y="219" width="524" height="496" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594290452981">
+    <state x="536" y="214" width="524" height="496" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594291716253">
       <screen x="0" y="27" width="1600" height="873" />
     </state>
-    <state x="536" y="219" width="524" height="496" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1600.873@0.27.1600.873" timestamp="1594290452981" />
+    <state x="536" y="214" width="524" height="496" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1600.873@0.27.1600.873" timestamp="1594291716253" />
     <state x="535" y="376" width="525" height="183" key="ComposerInitDialogKey" timestamp="1594231753602">
       <screen x="0" y="27" width="1600" height="873" />
     </state>

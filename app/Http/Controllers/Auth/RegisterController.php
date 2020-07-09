@@ -72,7 +72,7 @@ class RegisterController extends Controller
             'location' => $data['location'],
             'speciality' => $data['speciality'],
         ]);
-        $role = Role::find(1);
+        $role = Role::find(3);
         switch ($data['role']) {
             case 'Customer':
                 $user->assignRole($role);
@@ -85,7 +85,6 @@ class RegisterController extends Controller
                 $user->assignRole($role);
                 break;
         }
-        $user->assignRole($data['role']);
         return $user;
 
     }
