@@ -49,4 +49,20 @@ class AdminController extends Controller
         return redirect()->route('admin.products')->with('success','Successfully deleted product');
     }
 
+    public function acceptOrder($order){
+        $order = OrderProduct::find($order);
+        $order->update([
+            'status' => 'Approved'
+        ]);
+        return redirect()->back()->with('success','Successfully accepted an order');
+    }
+
+    public function denyOrder($order){
+        $order = OrderProduct::find($order);
+        $order->update([
+            'status' => 'Rejected'
+        ]);
+        return redirect()->back()->with('success','Successfully rejected an order');
+    }
+
 }

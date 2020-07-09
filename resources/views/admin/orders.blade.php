@@ -47,12 +47,16 @@
                             </td>
                             <td> {{ $order->status }}</td>
                             <td>
-                                <a class="btn btn-warning text-white">
+                                @if ($order->status !== 'Approved')
+                                <a class="btn btn-warning text-white" href="{{ route('admin.acceptOrder',['order' => $order->id]) }}">
                                     <i class="fas fa-check"></i> Accept
                                 </a>
-                                <a class="btn btn-danger text-white">
-                                    <i class="fas fa-trash"></i> Decline
-                                </a>
+                                @endif
+                           @if ($order->status !== 'Rejected')
+                           <a class="btn btn-danger text-white" href="{{ route('admin.denyOrder',['order' => $order->id]) }}">
+                                 <i class="fas fa-trash"></i> Decline
+                            </a>
+                           @endif
                             </td>
                         </tr>
                     @endforeach

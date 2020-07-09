@@ -51,6 +51,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.',], function () {
     Route::get('/registered/users','AdminController@users')->name('users');
     Route::get('/delete/{product}','AdminController@deleteProduct')->name('deleteProduct');
 
+    Route::get('/accept/{order}','AdminController@acceptOrder')->name('acceptOrder');
+    Route::get('/deny/{order}','AdminController@denyOrder')->name('denyOrder');
+
+
     // Permissions
     Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
     Route::resource('permissions', 'PermissionsController');
