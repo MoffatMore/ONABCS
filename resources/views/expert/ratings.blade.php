@@ -22,16 +22,14 @@
                 <div class="col col-12 text-center">
                     <div class="card">
                         <div class="card-header">
-                            <h2> 14240 <small> ratings </small></h2>
+                            <h2> {{ $ratings->count() }} <small> ratings </small></h2>
                         </div>
                         <div class="stars">
+                            @for($i = 1; $i <= $average; $i++)
                             <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
+                                @endfor
                         </div>
-                        <p> Average 4.5 <small> / </small> 5 </p>
+                        <p> {{ $average }}<small> / </small> 5 </p>
                     </div>
 
                 </div>

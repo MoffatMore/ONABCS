@@ -1,7 +1,15 @@
 @extends('layouts.customer-default')
 @section('content')
+    <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('customer.faults') }}">Faulty Gadgets</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit Details</li>
+        </ol>
+    </nav>
     <form method="POST" enctype="multipart/form-data" action="{{ route('fault.update',['fault' => $fault->id]) }}">
         @csrf
+        @method('PUT')
         <div class="form-group">
             <label>Gadget Name:</label>
             <div class="input-group">
@@ -24,7 +32,8 @@
         <div class="form-group">
             <label>Fault description</label>
             <textarea class="textarea form-control" name="description" required placeholder="Place some text here"
-                      style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">value="{{ $fault->description }}"</textarea>
+                      style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd;
+                       padding: 10px;">{{ $fault->description }}</textarea>
         </div>
         <button class="btn btn-primary" type="submit">Submit</button>
     </form>

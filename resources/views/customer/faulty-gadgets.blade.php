@@ -47,10 +47,10 @@
                         </td>
                         <td> {{ $fault->status }}</td>
                         <td>
-                            <a class="btn btn-warning text-white">
-                                <i class="fas fa-edit"></i> Edit
+                            <a class="btn btn-warning text-white" href="{{ route('fault.show',['fault' => $fault->id]) }}">
+                                <i class="fas fa-edit" ></i> Edit
                             </a>
-                            <a class="btn btn-danger text-white">
+                            <a class="btn btn-danger text-white" href="{{ route('customer.deleteOrder',['order' => $fault->id]) }}">
                                 <i class="fas fa-trash"></i> Delete
                             </a>
                             @if($fault->expert === null)

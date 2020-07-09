@@ -56,7 +56,7 @@ class ProductController extends Controller
                 'price' => $request->price,
                 'status' => 'Available',
             ]);
-            return redirect()->route('admin.new-product')->with('fail','Unsuccessfully added new product');
+            return redirect()->route('admin.products')->with('success','Successfully added a new product');
         }
 
         return redirect()->back()->with('fail','Unsuccessfully submitted request');

@@ -60,7 +60,7 @@ class FaultController extends Controller
             return redirect()->route('customer.expert-details',['fid'=>$fault->id]);
         }
 
-        return redirect()->back()->with('fail','Unsuccessfully submitted request');
+        return redirect()->route('customer.faults')->with('fail','Unsuccessfully submitted request');
     }
 
     /**
@@ -71,7 +71,8 @@ class FaultController extends Controller
      */
     public function show($id)
     {
-        //
+        $fault = Fault::find($id);
+        return view('customer.edit-faulty')->with('fault',$fault);
     }
 
     /**

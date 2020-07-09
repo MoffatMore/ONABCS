@@ -46,7 +46,9 @@
                             </td>
                             <td> {{ $fault->status }}</td>
                             <td>
+                                @if($fault->status !== 'Rated')
                                 <div class="row-cols-2">
+
                                     @if($fault->status !== 'Accepted')
                                     <form action="{{ route('fault.update',['fault'=>$fault->id]) }}" method="POST">
                                         @csrf
@@ -69,6 +71,7 @@
                                     </form>
                                         @endif
                                 </div>
+                                    @endif
                             </td>
                         </tr>
                     @endforeach

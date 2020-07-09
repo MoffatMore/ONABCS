@@ -40,13 +40,12 @@ class RatingController extends Controller
     {
         Rating::create([
             'rating'=>$request->selected_rating,
-            'user_id' => $request->id
+            'user_id' => $request->expert
         ]);
         $fault = Fault::find($request->fault);
         $fault->update([
             'status'=>'Rated'
         ]);
-
         return redirect()->route('customer.faults')->with('success','Successfully rated an expert!');
     }
 

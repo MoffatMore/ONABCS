@@ -48,9 +48,9 @@
                             <td>{{ $order->status }}</td>
                             <td>
                                 <a class="btn btn-sm btn-warning text-white">
-                                    <i class="fas fa-edit"></i> Edit
+                                    <i class="fas fa-edit" href="{{ route('product.show',['product' => $order->id]) }}"></i> Edit
                                 </a>
-                                <a class="btn btn-sm btn-danger text-white">
+                                <a class="btn btn-sm btn-danger text-white" href="{{ route('admin.deleteProduct',['order' => $order->id]) }}">
                                     <i class="fas fa-trash"></i> Delete
                                 </a>
                                 <a href="{{ route('customer.order-details',['product'=>$order->product->id]) }}" class="btn btn-sm btn-info text-white">

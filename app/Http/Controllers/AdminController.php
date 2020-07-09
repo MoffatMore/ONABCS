@@ -34,4 +34,12 @@ class AdminController extends Controller
         return view('admin.products')->with('products',$products);
     }
 
+    public function deleteProduct($product)
+    {
+
+        $product = Fault::find($product);
+        $product->delete();
+        return redirect()->route('admin.products')->with('success','Successfully deleted product');
+    }
+
 }

@@ -45,7 +45,6 @@
                 @endforeach
             </div>
             <div class="row-cols-2 offset-2">
-                {{ $product->links }}
             </div>
         </div>
     </div>

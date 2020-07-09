@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 
+use App\Fault;
+use App\OrderProduct;
 use App\Product;
 use App\User;
 
@@ -53,5 +55,12 @@ class CustomerController extends Controller
     {
         $user = User::find($expert);
         return view('customer.rate-expert')->with(['expert'=>$user,'fault'=>$fault]);
+    }
+
+    public function deleteOrder($order)
+    {
+        $fault = Fault::find($order);
+        $fault->delete();
+        return redirect()->route('customer.orders')->with('success','Successfully deleted fault gadget');
     }
 }

@@ -25,8 +25,8 @@
                 <label class="control-label" for="rating">
                     <span class="field-label-header">How would you rate {{ $expert->name }} according to the service provided?*</span><br>
                     <span class="field-label-info"></span>
-
-                    <input type="hidden" id="fault" name="id" value="{{ $expert->id }}">
+                    <input type="hidden" id="fault" name="fault" value="{{ $fault }}">
+                    <input type="hidden" id="expert" name="expert" value="{{ $expert->id }}">
                     <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
                 </label>
                 <h2 class="bold rating-header" style="">
