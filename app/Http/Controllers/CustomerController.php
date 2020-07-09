@@ -66,6 +66,13 @@ class CustomerController extends Controller
     {
         $order = OrderProduct::find($order);
         $order->delete();
-        return redirect()->route('customer.orders')->with('success','Successfully deleted fault gadget');
+        return redirect()->route('customer.orders')->with('success','Successfully deleted an order');
+    }
+
+    public function deleteFault($fault)
+    {
+        $fault = Fault::find($fault);
+        $fault->delete();
+        return redirect()->route('customer.faults')->with('success','Successfully deleted fault gadget');
     }
 }

@@ -33,6 +33,7 @@ Route::group(['prefix' => 'customer','as' => 'customer.'], function () {
     Route::get('/orders','CustomerController@orders')->name('orders');
     Route::get('/fix-gadgets','CustomerController@fix')->name('fix');
     Route::get('/delete/{order}', 'CustomerController@deleteOrder')->name('deleteOrder');
+    Route::get('/delete-fault/{fault}', 'CustomerController@deleteFault')->name('deleteFault');
     Route::get('/buy', 'CustomerController@buy')->name('buy');
     Route::get('/rate/{expert}/{fault}','CustomerController@rateExpert')->name('rateExpert');
     Route::get('/faulty-gadgets','CustomerController@faultyGadgets')->name('faults');
