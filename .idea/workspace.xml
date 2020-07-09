@@ -2,17 +2,117 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="286ce7a3-3a8b-4195-ad9b-649bbd7a6225" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/expert-default.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PermissionsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/RatingController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/RolesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/MassDestroyPermissionRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/MassDestroyRoleRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/MassDestroyUserRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/StorePermissionRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/StoreRoleRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/StoreUserRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UpdatePermissionRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UpdateRoleRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UpdateUserRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Listeners/UserRequestNotification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Notifications/RequestNotification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Permission.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bakefile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/lib/PyBindGen-0.19.0.post4+g823d8b2-py3.8.egg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/lib/easy-install.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/lib/site.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_07_09_005410_create_notifications_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/permissions/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/permissions/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/permissions/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/permissions/relationships/permissionsRoles.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/permissions/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/relationships/rolesUsers.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/customer/edit-faulty.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/customer/notifications.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/customer/rate-expert.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/.qmake.stash" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/animatormode.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/animatorscene.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/animatorview.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/animlink.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/animnode.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/animpacket.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/animresource.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/animxmlparser.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/fatal-error.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/fatal-impl.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/log.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/logqt.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/main.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/mode.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/netanim.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/resizeableitem.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/routingxmlparser.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/statsmode.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/netanim-3.108/statsview.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/castxmlparser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/container.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/converter_functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/cppattribute.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/cppclass.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/cppclass_container.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/cppcustomattribute.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/cppexception.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/cppmethod.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/enum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/function.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/gccxmlparser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/overloading.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/pytypeobject.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/typehandlers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/typehandlers/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/typehandlers/booltype.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/typehandlers/codesink.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/typehandlers/ctypeparser/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/typehandlers/ctypeparser/tokenizer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/typehandlers/doubletype.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/typehandlers/floattype.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/typehandlers/inttype.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/typehandlers/pyobjecttype.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/typehandlers/smart_ptr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/typehandlers/stringtype.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/typehandlers/voidtype.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/pybindgen/objdir/lib/pybindgen/wrapper_registry.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/cs-shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cs-shop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExpertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExpertController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RedirectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RedirectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Rating.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rating.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_05_193346_create_ratings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_05_193346_create_ratings_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/faulty-gadgets.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/faulty-gadgets.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/expert-dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/expert-dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/customer-default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/customer-default.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/expert/ratings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/expert/ratings.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/expert/requests.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/expert/requests.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/netanim-3.108/qrc_qtpropertybrowser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/netanim-3.108/qrc_qtpropertybrowser.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,14 +251,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/resources/views/layouts/admin-default.blade.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/admin" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/Http" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
-      <recent name="C:\Users\Moffat\Documents\Projects\cs-shop\resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Moffat\Documents\Projects\cs-shop\resources\views\customer" />
@@ -184,7 +288,7 @@
       <workItem from="1594068240042" duration="761000" />
       <workItem from="1594069430323" duration="9614000" />
       <workItem from="1594116528957" duration="10057000" />
-      <workItem from="1594239041353" duration="2853000" />
+      <workItem from="1594239041353" duration="16301000" />
     </task>
     <servers />
   </component>
@@ -215,9 +319,24 @@
       <screen x="0" y="27" width="1600" height="873" />
     </state>
     <state x="200" y="137" width="1200" height="633" key="DiffContextDialog/0.27.1600.873@0.27.1600.873" timestamp="1594244029629" />
-    <state x="586" y="214" width="424" height="496" key="FileChooserDialogImpl" timestamp="1594243940868">
+    <state x="586" y="204" width="424" height="496" key="FileChooserDialogImpl" timestamp="1594250153692">
       <screen x="0" y="27" width="1600" height="873" />
     </state>
-    <state x="586" y="214" width="424" height="496" key="FileChooserDialogImpl/0.27.1600.873@0.27.1600.873" timestamp="1594243940868" />
+    <state x="586" y="204" width="424" height="496" key="FileChooserDialogImpl/0.27.1600.873@0.27.1600.873" timestamp="1594250153692" />
+    <state x="598" y="367" width="399" height="161" key="NewPhpFileDialog" timestamp="1594280126904">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="598" y="367" width="399" height="161" key="NewPhpFileDialog/0.27.1600.873@0.27.1600.873" timestamp="1594280126904" />
+    <state x="292" y="91" width="1016" height="742" key="SettingsEditor" timestamp="1594280238284">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="292" y="91" width="1016" height="742" key="SettingsEditor/0.27.1600.873@0.27.1600.873" timestamp="1594280238284" />
+    <state x="464" y="203" key="run.anything.popup" timestamp="1594252352839">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="464" y="203" key="run.anything.popup/0.27.1600.873@0.27.1600.873" timestamp="1594252352839" />
+  </component>
+  <component name="hg4idea.settings">
+    <option name="RECENT_HG_ROOT_PATH" value="$PROJECT_DIR$/source/ns-3.29" />
   </component>
 </project>

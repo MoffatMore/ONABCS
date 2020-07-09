@@ -95,7 +95,7 @@ class FaultController extends Controller
     public function update(Request $request, Fault $fault)
     {
         $fault->update($request->all());
-        return redirect()->route('dashboard')->with('success','Successfully submitted request');
+        return redirect()->back()->with('success','Successfully updated request');
     }
 
     /**

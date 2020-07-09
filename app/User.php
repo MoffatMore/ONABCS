@@ -64,4 +64,9 @@ class User extends Authenticatable implements Searchable
     {
         return $this->hasMany(Fault::class,'expert_id','id');
     }
+
+    public function ratings()
+    {
+        return $this->hasMany(Rating::class);
+    }
 }

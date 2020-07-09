@@ -21,7 +21,8 @@ class RedirectController extends Controller
         }
         switch ($user->roles()->first()->name){
             case 'Customer':
-                return view('customer-dashboard');
+                $notifications = auth()->user()->unreadNotifications;
+                return view('customer-dashboard',compact('notifications'));
             case 'Expert':
                 return view('expert-dashboard');
             default:

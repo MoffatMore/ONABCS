@@ -48,4 +48,10 @@ class CustomerController extends Controller
         $products = Product::all();
         return view('welcome')->with('products',$products);
     }
+
+    public function rateExpert($expert,$fault)
+    {
+        $user = User::find($expert);
+        return view('customer.rate-expert')->with(['expert'=>$user,'fault'=>$fault]);
+    }
 }

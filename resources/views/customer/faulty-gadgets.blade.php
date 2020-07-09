@@ -58,8 +58,8 @@
                                Assign Expert
                             </a>
                                 @endif
-                            @if($fault->status === 'Complete')
-                                <a href="{{ route('customer.order-details') }}" class="btn btn-info text-white">
+                            @if($fault->status === 'Accepted')
+                                <a href="{{ route('customer.rateExpert',['expert' =>  $fault->expert->id,'fault' => $fault->id]) }}" class="btn btn-info text-white">
                                     <i class="fas fa-star"></i> Rate Expert
                                 </a>
                             @endif
