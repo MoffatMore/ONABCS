@@ -19,7 +19,6 @@ Route::get('/', function(){
 
 Auth::routes();
 
-Route::redirect('/home', '/redirect')->name('home');
 Route::get('/redirect', 'RedirectController')->name('dashboard');
 
 Route::resource('product', 'ProductController');
