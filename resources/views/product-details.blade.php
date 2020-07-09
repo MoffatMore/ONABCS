@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.customer-default')
 @section('content')
 
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -11,7 +11,7 @@
           <li class="breadcrumb-item active" aria-current="page">Details</li>
         </ol>
       </nav>
-    <div class="row">
+    <div class="row mt-5">
         <div class="col col-6">
             <div class="col-xs-4 item-photo">
                 @if($product->picture != null)

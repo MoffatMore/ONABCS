@@ -13,7 +13,8 @@ class Product extends Model implements Searchable
        'name',
        'description',
        'user_id',
-       'price'
+       'price',
+       'picture'
     ];
 
     public function getSearchResult(): SearchResult

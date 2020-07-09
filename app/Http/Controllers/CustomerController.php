@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Fault;
+use App\OrderProduct;
 use App\Product;
 use App\User;
 
@@ -62,8 +63,8 @@ class CustomerController extends Controller
 
     public function deleteOrder($order)
     {
-        $fault = Fault::find($order);
-        $fault->delete();
+        $order = OrderProduct::find($order);
+        $order->delete();
         return redirect()->route('customer.orders')->with('success','Successfully deleted fault gadget');
     }
 }

@@ -40,7 +40,7 @@ class FaultController extends Controller
         if ($request->hasFile('picture')){
             $file = $request->file('picture');
 
-            Storage::putFile($file->getClientOriginalName(),$file);
+            Storage::disk('public')->put($file->getClientOriginalName(),$file);
             $fault = Fault::create([
                 'name' => $request->name,
                 'picture' => $file->getClientOriginalName(),

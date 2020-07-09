@@ -21,22 +21,23 @@
             <div class="form-group">
                 <label>Price (BWP):</label>
                 <div class="input-group">
-                    <input type="text" name="price" required class="form-control float-right" id="name">
+                    <input type="text" name="price" required class="form-control float-right" id="price">
                 </div>
                 <!-- /.input group -->
             </div>
             <div class="form-group">
-                <label for="exampleInputFile">Picture</label>
+                <label for="exampleInputFile">File input</label>
                 <div class="input-group">
-                    <div class="custom-file">
-                        <input type="file"  id="exampleInputFile" name="picture">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                    </div>
-                    <div class="input-group-append">
-                        <span class="input-group-text" id="">Upload</span>
-                    </div>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" name="picture" id="exampleInputFile">
+                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                  </div>
+                  <div class="input-group-append">
+                    <span class="input-group-text" id="">Upload</span>
+                  </div>
                 </div>
-            </div>
+              </div>
+
             <div class="form-group">
                 <label>Description</label>
                 <textarea class="textarea form-control" name="description" required placeholder="Place some text here"
@@ -45,4 +46,5 @@
             <button class="btn btn-primary" type="submit">Submit</button>
         </form>
     </div>
+
 @stop

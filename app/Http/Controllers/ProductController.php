@@ -40,7 +40,7 @@ class ProductController extends Controller
         if ($request->hasFile('picture')){
             $file = $request->file('picture');
 
-            Storage::putFile($file->getClientOriginalName(),$file);
+            Storage::disk('public')->put($file->getClientOriginalName(),$file);
             $product = Product::create([
                 'name'=>$request->name,
                 'description' =>$request->description,
@@ -72,7 +72,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
 
-       return view('admin.edit-product',compact('product'));
+       return view('product-details',compact('product'));
     }
 
     /**
@@ -83,7 +83,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view('admin.edit-product',compact('product'));
     }
 
     /**
