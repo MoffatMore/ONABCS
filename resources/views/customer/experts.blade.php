@@ -25,7 +25,7 @@
             <div class="card-body pb-0">
                 <div class="row d-flex align-items-stretch">
                     @foreach($users as $user)
-                        @if($user->roles()->first()->name === 'Expert' && $user->location === auth()->user()->location)
+                        @if(($user->roles()->first() != null) && $user->roles()->first()->name === 'Expert' && $user->location === auth()->user()->location)
                     <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                         <div class="card bg-light">
                             <div class="card-header text-muted border-bottom-0">
