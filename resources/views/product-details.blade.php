@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="section" style="padding-bottom:20px;">
-                    <form action="{{ route('order.store') }}" method="POST">
+                    <form action="{{ route('customer.addItemCart') }}" method="POST">
                         @csrf
                         <input type="hidden" name="product_id" value="{{ $product->id }}">
                         <div class="form-group">
@@ -49,7 +49,7 @@
                         </div>
                         <button class="btn btn-success">
                             <span style="margin-right:20px" class="fa fa-shopping-cart" aria-hidden="true">
-                            </span> Order product
+                            </span> Add Cart
                         </button>
                     </form>
                 </div>

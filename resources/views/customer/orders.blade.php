@@ -22,6 +22,7 @@
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Summary of My Orders</h3>
+                <a class="btn btn-primary float-right text-white" href="{{ route('cart.index') }}"><i class="fa fa-shopping-cart"></i>Shopping Cart</a>
             </div>
             <!-- /.card-header -->
             <div class="card-body">

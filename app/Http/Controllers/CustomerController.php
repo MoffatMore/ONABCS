@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Cart;
 use App\Fault;
 use App\OrderProduct;
 use App\Product;
 use App\User;
+use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
@@ -74,5 +75,51 @@ class CustomerController extends Controller
         $fault = Fault::find($fault);
         $fault->delete();
         return redirect()->route('customer.faults')->with('success','Successfully deleted fault gadget');
+    }
+
+    public function addItemCart(Request $request)
+    {
+        Cart::create([
+            'product_id' => $request->product_id,
+            'quantity' => $request->quantity,
+            'user_id' => auth()->user()->id,
+        ]);
+        return redirect()->route('cart.index')->with('success','Successfully added item to cart');
+    }
+
+    public function deleteItemCart($item)
+    {
+        $order = Cart::find($item);
+        $order->delete();
+        return redirect()->back()->with('success','Successfully deleted a cart');
+    }
+
+    public function addItemOrder(Request $request)
+    {
+        $user = User::with('cart','cart.product')->find(auth()->user()->id);
+        $carts = $user->cart;
+
+
+        foreach ($carts as $key) {
+            //dd($key->quantity);
+            OrderProduct::updateOrCreate([
+                'product_id' => $key->product_id,
+                'quantity' => $key->quantity,
+                'user_id' =>  $key->user_id,
+                'status' => 'Pending'
+            ],
+            [
+                'product_id' => $key->product_id,
+                'quantity' => $key->quantity,
+                'user_id' =>  $key->user_id,
+                'status' => 'Pending',
+                'quantity' => $key->quantity,
+            ]);
+
+            $key->delete();
+        }
+
+        return redirect()->route('customer.orders')->with('success','Successfully added an order');
+
     }
 }

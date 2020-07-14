@@ -26,6 +26,7 @@ Route::resource('users', 'UserController');
 Route::resource('fault', 'FaultController');
 Route::resource('order', 'OrderController');
 Route::resource('rating', 'RatingController');
+Route::resource('cart', 'ShoppingCartController');
 
 Route::group(['prefix' => 'customer','as' => 'customer.'], function () {
     Route::post('/mark-as-read', 'HomeController@markNotification')->name('markNotification');
@@ -39,6 +40,10 @@ Route::group(['prefix' => 'customer','as' => 'customer.'], function () {
     Route::get('/faulty-gadgets','CustomerController@faultyGadgets')->name('faults');
     Route::get('/order-details/{product}','CustomerController@showOrder')->name('order-details');
     Route::get('/expert-details/{fid}','CustomerController@showExperts')->name('expert-details');
+    Route::post('/add-item-cart','CustomerController@addItemCart')->name('addItemCart');
+    Route::get('/delete-item-cart/{item}','CustomerController@deleteItemCart')->name('deleteItemCart');
+    Route::post('/add-item-order','CustomerController@addItemOrder')->name('addItemOrder');
+
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.',], function () {

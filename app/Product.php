@@ -32,4 +32,9 @@ class Product extends Model implements Searchable
     {
         return $this->hasMany(OrderProduct::class);
      }
+
+     public function cart()
+    {
+        return $this->hasMany(Cart::class);
+     }
 }
