@@ -35,7 +35,7 @@ class CustomerController extends Controller
 
     public function showExperts(int $fid)
     {
-        $user = User::paginate(3);
+        $user = User::all();
         return view('customer.experts')
             ->with([
                 'users'=>$user,
